@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: githubIntegration                      # <-- replace with your integration
-      path: elanabakst-github/jfrog-pipelines-docker-sample/    # <-- replace with your repository name
+      path: elanabakst-github/jfrog-pipelines-docker-sample    # <-- replace with your repository name
       branches:
         include: master
 
