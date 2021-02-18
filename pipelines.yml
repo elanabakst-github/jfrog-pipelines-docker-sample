@@ -12,7 +12,7 @@ resources:
     configuration:
       registry: artifactoryintergration                                # <-- replace with your artifactory integration
       sourceRepository: example-repo-local               # <-- required if registry is Artifactory
-      imageName:  elanafree.jfrog.io/artifactory/example-repo-local/dbp < -- replace with your image path and name
+      imageName:  elanafree.jfrog.io/artifactory/example-repo-local/dbp_image < -- replace with your image path and name
       imageTag: latest
       autoPull: true
       
@@ -40,7 +40,7 @@ pipelines:
           affinityGroup: dbp_group
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: elanafree.jfrog.io/artifactory/example-repo-local/dbp  # replace with your image path and name
+          dockerImageName: elanafree.jfrog.io/artifactory/example-repo-local/dbp_image  # replace with your image path and name
           dockerImageTag: ${run_number}
           inputResources:
             - name: dbp_repo
