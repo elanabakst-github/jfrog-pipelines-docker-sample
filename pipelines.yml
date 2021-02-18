@@ -12,7 +12,7 @@ resources:
     configuration:
       registry: artifactoryintergration                                # <-- replace with your artifactory integration
       sourceRepository: dockertest               # <-- required if registry is Artifactory
-      imageName: https://elanafree.jfrog.io/artifactory/dockertest # < -- replace with your image path and name
+      imageName: https://elanafree.jfrog.io/artifactory/dockertest/image001.jpg # < -- replace with your image path and name
       imageTag: latest
       autoPull: true
       
