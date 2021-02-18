@@ -40,12 +40,12 @@ pipelines:
           affinityGroup: dbp_group
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: kaloula.jfrog-pipelines.com/docker-local/dbp  # replace with your image path and name
+          dockerImageName: https://elanafree.jfrog.io/artifactory/dockertest  # replace with your image path and name
           dockerImageTag: ${run_number}
           inputResources:
             - name: dbp_repo
           integrations:
-            - name: art                            # <-- replace with your artifactory integration
+            - name: artifactoryintergration                            # <-- replace with your artifactory integration
 
       - name: docker_push
         type: DockerPush
@@ -53,7 +53,7 @@ pipelines:
           affinityGroup: dbp_group
           targetRepository: docker-local
           integrations:
-            - name: art                            # <-- replace with your artifactory integration
+            - name: artifactoryintergration                            # <-- replace with your artifactory integration
           inputSteps:
             - name: docker_build
           outputResources:
