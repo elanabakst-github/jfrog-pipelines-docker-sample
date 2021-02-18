@@ -12,7 +12,7 @@ resources:
     configuration:
       registry: artifactoryintergration                                # <-- replace with your artifactory integration
       sourceRepository: example-repo-local               # <-- required if registry is Artifactory
-      imageName:  https://elanafree.jfrog.io/artifactory/example-repo-local/dbp_image < -- replace with your image path and name
+      imageName:  https://elanafree.jfrog.io/artifactory/example-repo-local/ < -- replace with your image path and name
       imageTag: latest
       autoPull: true
       
